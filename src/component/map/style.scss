@@ -1,0 +1,32 @@
+#map{
+    height: 92vh;
+    .location{
+        background: #1ACCA8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: .2rem 1rem;
+        border-radius: 10px;
+        font-weight: 600;
+        color: #fff;
+        font-size: .5rem;
+        z-index: 1000;
+        &::after{
+            position: absolute;
+            transform: rotate(180deg);
+            content: '';
+            width: 0;
+            height: 0;
+            top:9px;
+            left:2px;
+            border: 0 solid transparent;
+            border-right-width: 8px;
+            border-left-width: 8px;
+            border-bottom: 12px solid #1ACCA8;
+            z-index: -100;
+        }
+    }
+    @media screen and(max-width:700px){
+        height: 55vh;
+    }
+}
